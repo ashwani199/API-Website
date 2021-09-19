@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Luckiest+Guy">
+</head>
+
+<body>
+    
+    <section>
+        <h1>Check Your PERSONALITY</h1>
+        <h1>WHAT DOES YOUR SAY ABOUT YOUR PERSONALITY?</h1>
+        <div class="centerDiv">
+            <div class="details">
+                <label>ENTER YOUR NAME</label>
+                <input type="text" id="nameid">
+            </div>
+
+            <div class="imgdiv">
+                <img src="https://t3.ftcdn.net/jpg/03/67/35/72/360_F_367357209_BG07SVnnB4HSHSaMiHajfZhrZZAE859A.jpg"
+                    width="200" height="200" id="imgchange">
+
+            </div>
+
+            <button> Click Me </button>
+
+        </div>
+    </section>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"
+        integrity="sha512-Pa4Jto+LuCGBHy2/POQEbTh0reuoiEXQWXGn8S7aRlhcwpVkO8+4uoZVSOqUjdCsE+77oygfu2Tl+7qGHGIWsw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                const name = $('#nameid').val();
+                alert(name);
+                $('#imgchange').attr('src', `https://joeschmoe.io/api/v1/${name}`);
+                const b = $('#imgchange');
+                // console.log(b);
+            });
+
+        });
+    </script>
+</body>
+
+</html>
